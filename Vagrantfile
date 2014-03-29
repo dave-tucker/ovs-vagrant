@@ -35,7 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "freebsd" do |freebsd|
     freebsd.vm.box = "freebsd10-x64"
-    freebsd.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_freebsd-10_chef-provisionerless.box"
+    freebsd.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_freebsd-10.0_chef-provisionerless.box"
     freebsd.vm.provision "shell", path: "vagrant/scripts/freebsd.sh"
     freebsd.vm.provision "puppet" do |puppet|
       puppet.manifests_path = "vagrant/manifests/"
